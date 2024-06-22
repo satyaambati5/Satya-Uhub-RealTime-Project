@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
@@ -8,7 +10,7 @@
 	<packaging>mule-application</packaging>
 
 	<name>uho-sapi</name>
-<!-- mvn clean package deploy -pdev -DmuleDeploy -Dusername=SatyaAmbatidev -Dpassword=Satya@1865 -Danypoint.platform.client_id=4b7206644b5f4f65ab7ed633b56e6fd7 Danypoint.platform.client_secret=4Bc4EA6503B245f5bdb6eD0FAF804E01 -->
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -17,23 +19,12 @@
 		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
 		<!-- <munit.version>3.1.0</munit.version> -->
 	</properties>
-	<profiles>
+	
+	<!-- <profiles>
 		<profile>
 			<id>dev</id>
 			<build>
 				<plugins>
-				<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-install-plugin</artifactId>
-            <version>4.1.0</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>install</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
 					<plugin>
 						<groupId>org.mule.tools.maven</groupId>
 						<artifactId>mule-maven-plugin</artifactId>
@@ -42,14 +33,14 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>uho-dev-uhub-sapi</applicationName>
-								<environment>Sandbox</environment>
+								<environment>dev</environment>
 								<region>us-east-1</region>
 								<workers>1</workers>
 								<workerType>MICRO</workerType>
 								<properties>
 									<env>dev</env>
 									<enc.key>${enc.key}</enc.key>
-									<!-- <api.id>17458358</api.id> -->
+									<api.id>17458358</api.id>
 									<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
 									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
 								</properties>
@@ -71,14 +62,14 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>uho-test-uhub-sapi</applicationName>
-								<environment>Design</environment>
+								<environment>test</environment>
 								<region>us-east-1</region>
 								<workers>1</workers>
 								<workerType>MICRO</workerType>
 								<properties>
 									<env>test</env>
 									<enc.key>${enc.key}</enc.key>
-									<!-- <api.id>17460676</api.id> -->
+									<api.id>17460676</api.id>
 									<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
 									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
 								</properties>
@@ -88,8 +79,7 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
-
+	</profiles> -->
 	<build>
 		<plugins>
 			<plugin>
@@ -112,13 +102,19 @@
 						<properties>
 							<anypoint.platform.base_uri>https://anypoint.mulesoft.com/</anypoint.platform.base_uri>
 							<anypoint.platform.analytics_base_uri>https://analytics-ingest.anypoint.mulesoft.com/</anypoint.platform.analytics_base_uri>
+							<env>test</env>
+									<enc.key>${enc.key}</enc.key>
+									
+									<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
+								
 						</properties>
 					</cloudHubDeployment>
 					<sharedLibraries>
-						<!-- <sharedLibrary>
+						<sharedLibrary>
 							<groupId>com.oracle.database.jdbc</groupId>
 							<artifactId>ojdbc6</artifactId>
-						</sharedLibrary> -->
+						</sharedLibrary>
 						<sharedLibrary>
 							<groupId>org.postgresql</groupId>
 							<artifactId>postgresql</artifactId>
@@ -126,29 +122,11 @@
 					</sharedLibraries>
 				</configuration>
 			</plugin>
-			<!-- <plugin>
-				<groupId>com.mulesoft.munit.tools</groupId>
-				<artifactId>munit-maven-plugin</artifactId>
-				<version>${munit.version}</version>
-				<executions>
-					<execution>
-						<id>test</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-							<goal>coverage-report</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<coverage>
-						<runCoverage>true</runCoverage>
-						<formats>
-							<format>html</format>
-						</formats>
-					</coverage>
-				</configuration>
-			</plugin> -->
+			<!-- <plugin> <groupId>com.mulesoft.munit.tools</groupId> <artifactId>munit-maven-plugin</artifactId> 
+				<version>${munit.version}</version> <executions> <execution> <id>test</id> 
+				<phase>test</phase> <goals> <goal>test</goal> <goal>coverage-report</goal> 
+				</goals> </execution> </executions> <configuration> <coverage> <runCoverage>true</runCoverage> 
+				<formats> <format>html</format> </formats> </coverage> </configuration> </plugin> -->
 		</plugins>
 	</build>
 
@@ -188,7 +166,7 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.4</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
 			<version>3.1.0</version>
@@ -207,7 +185,7 @@
 			<artifactId>assertions</artifactId>
 			<version>1.2.1</version>
 			<scope>test</scope>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
