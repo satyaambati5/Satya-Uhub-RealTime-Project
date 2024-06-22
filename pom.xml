@@ -90,7 +90,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>4.1.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
