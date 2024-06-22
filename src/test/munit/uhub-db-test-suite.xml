@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="uhub-db-test-suite.xml" />
+	<munit:test name="uhub-db-test-suite-insert-Covid-case-Sub-FlowTest" doc:id="59567f6e-2fac-4b4e-8fbd-bf421d45202a" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to insert-Covid-case-Sub-Flow" doc:id="228503b0-fe12-445d-9166-fc5b5ed69899" name="insert-Covid-case-Sub-Flow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit:set-null-payload doc:name="Set null payload" doc:id="f23ad923-db45-4c16-a148-97e88f24840d" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

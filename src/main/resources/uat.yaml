@@ -1,0 +1,18 @@
+http:
+  port: "8085"
+
+database:
+  uhub:
+    host: "localhost"
+    port: "1521"
+    user: "system"
+    password: "![VHzbaGesfhRRW+y4uMvxPQ==]"
+    instance: "XE"
+    
+  uhubpostgres:
+    url: "jdbc:postgresql:"
+    host: "localhost"
+    port: "5432"
+    dbname: "Satya_uhub_sapi_db"
+    user: "postgres"
+    password: "![WuuCORiCJ3UfbEUonPEXtA==]"
