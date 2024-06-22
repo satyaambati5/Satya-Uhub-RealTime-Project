@@ -8,7 +8,7 @@
 	<packaging>mule-application</packaging>
 
 	<name>uho-sapi</name>
-<!-- mvn clean package deploy -pdev -DmuleDeploy -Dusername=SatyaAmbati -Dpassword=Satya@1865 -Danypoint.platform.client_id=9f8efefb2b674f8ca76e39f34dfea975 Danypoint.platform.client_secret=900FE4cBb9374d17B0Da52653435a469 -->
+<!-- mvn clean package deploy -pdev -DmuleDeploy -Dusername=SatyaAmbatidev -Dpassword=Satya@1865 -Danypoint.platform.client_id=4b7206644b5f4f65ab7ed633b56e6fd7 Danypoint.platform.client_secret=4Bc4EA6503B245f5bdb6eD0FAF804E01 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
