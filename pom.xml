@@ -17,6 +17,7 @@
 
 		<app.runtime>4.6.1</app.runtime>
 		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
+		 <maven.install.plugin.version>3.1.2</maven.install.plugin.version>
 		<!-- <munit.version>3.1.0</munit.version> -->
 	</properties>
 	
@@ -85,8 +86,20 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.4.0</version>
 			</plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>install</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -122,6 +135,7 @@
 					</sharedLibraries>
 				</configuration>
 			</plugin>
+			
 			<!-- <plugin> <groupId>com.mulesoft.munit.tools</groupId> <artifactId>munit-maven-plugin</artifactId> 
 				<version>${munit.version}</version> <executions> <execution> <id>test</id> 
 				<phase>test</phase> <goals> <goal>test</goal> <goal>coverage-report</goal> 
