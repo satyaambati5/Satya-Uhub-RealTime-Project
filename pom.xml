@@ -17,8 +17,8 @@
 
 		<app.runtime>4.6.1</app.runtime>
 		
-		<mule.maven.plugin.version>3.6.3</mule.maven.plugin.version>
-		 <maven.install.plugin.version>3.1.2</maven.install.plugin.version>
+		<mule.maven.plugin.version>3.9.6</mule.maven.plugin.version>
+		
 		<!-- <munit.version>3.1.0</munit.version> -->
 	</properties>
 	
@@ -93,7 +93,7 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.7.1</version>
+				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
