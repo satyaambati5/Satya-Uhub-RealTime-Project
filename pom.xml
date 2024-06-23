@@ -19,6 +19,7 @@
 		
 		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
 		  <maven.install.plugin.version>2.5.2</maven.install.plugin.version>
+		
 		<!-- <munit.version>3.1.0</munit.version> -->
 	</properties>
 	
@@ -29,9 +30,9 @@
 				<plugins>
 					<plugin>
 						<groupId>org.mule.tools.maven</groupId>
-						<artifactId>mule-maven-plugin</artifactId>
-						<version>${mule.maven.plugin.version}</version>
-						<extensions>true</extensions>
+  <artifactId>mule-maven-plugin</artifactId>
+  <version>3.7.1</version>
+  <extensions>true</extensions>
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>uho-dev-uhub-sapi</applicationName>
