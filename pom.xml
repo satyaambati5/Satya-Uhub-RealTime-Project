@@ -16,7 +16,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.6.1</app.runtime>
-		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
+		
+		<mule.maven.plugin.version>3.6.3</mule.maven.plugin.version>
 		 <maven.install.plugin.version>3.1.2</maven.install.plugin.version>
 		<!-- <munit.version>3.1.0</munit.version> -->
 	</properties>
@@ -86,24 +87,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.4.0</version>
+				<version>3.0.0</version>
 			</plugin>
-			<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>3.1.2</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+			
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>4.1.0</version>
+				<version>3.7.1</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
@@ -224,7 +214,7 @@
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
 			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
-			<layout>4.1.0</layout>
+			<layout>default</layout>
 		</repository>
 		<repository>
 			<id>mulesoft-releases</id>
